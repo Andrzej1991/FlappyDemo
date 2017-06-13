@@ -9,7 +9,7 @@ import com.badlogic.gdx.math.Vector3;
  */
 
 public class Bird {
-    private static final int GRAVITY = -15;
+    private static final int GRAVITY = -12;
     private static final int MOVEMENT = 100;
     private Vector3 position;
     private Vector3 velocity;
@@ -51,5 +51,9 @@ public class Bird {
 
     public Rectangle getBounds() {
         return bounds;
+    }
+
+    public void dispose(){
+        bird.dispose();
     }
 }

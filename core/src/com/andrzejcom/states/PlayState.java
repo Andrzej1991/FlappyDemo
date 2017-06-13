@@ -26,7 +26,7 @@ public class PlayState extends State {
 
     protected PlayState(GameStateManager gsm) {
         super(gsm);
-        bird = new Bird(50, 100);
+        bird = new Bird(25, 130);
         cam.setToOrtho(false, FlappyDemo.WIDTH / 2, FlappyDemo.HEIGHT / 2);
         bg = new Texture("bg.png");
         tubes = new Array<Tube>();

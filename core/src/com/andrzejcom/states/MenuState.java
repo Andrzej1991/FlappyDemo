@@ -1,6 +1,7 @@
 package com.andrzejcom.states;
 
 import com.andrzejcom.FlappyDemo;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
@@ -21,12 +22,15 @@ public class MenuState extends State {
 
     @Override
     public void handlerInput() {
-
+        if (Gdx.input.justTouched()) {
+            gsm.set(new PlayState(gsm));
+            dispose();
+        }
     }
 
     @Override
     public void update(float dr) {
-
+        handlerInput();
     }
 
     @Override
